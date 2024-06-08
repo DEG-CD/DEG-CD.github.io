@@ -203,3 +203,46 @@
 .list-group-item::after {
     content: '';
 }
+
+.btn-primary {
+    background-color: var(--main-blue);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--second-blue);
+}
+
+.card-header {
+    background-color: var(--lighter-blue);
+    color: var(--main-blue);
+}
+
+.card-header h5.card-title {
+    color: var(--main-blue);
+}
+
+.card-footer {
+    background-color: var(--lighter-blue);
+    color: var(--lighter-blue);
+}
+
+footer {
+    background-color: var(--light-blue);
+    color: var(--white);
+}
+
+footer a {
+    color: var(--main-blue);
+}
+
+.list-group-flush .list-group-item {
+    background-color: transparent;
+}
+
+.list-group-flush .list-group-item::before {
+    background-color: var(--gold);
+    color: var(--white);
+    content: '';
+}
+
