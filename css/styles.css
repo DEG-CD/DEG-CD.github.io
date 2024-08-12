@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* variables*/
 :root{
     --white: #fafafa;
@@ -9,6 +10,13 @@
     --dark-gold: #a68b3f;
     --light-blue: #ddf0fc;
     --lighter-blue: #ddf0fc;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+.bg-agendamate-color {
+    background-color: var(--light-blue);
 }
 .bg-agendame {
     background-color: var(--light-blue);
@@ -27,21 +35,18 @@
 }
 
 * {
-    color: var(--second-blue);
-    font-weight: 400;
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    font-weight: normal;
     font-style: normal;
-    font-variation-settings: "slnt" 0;
 }
 
 .list-group-item {
     color: var(--second-blue);
-    font-weight: 500;
-    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    font-weight: normal;
     font-style: normal;
-    font-variation-settings: "slnt" 0;
 }
 
 .img-background-color {
@@ -53,9 +58,16 @@
 }
 
 .card-title {
-    color: var(--dark-gold);
+    color: var(--main-blue);
     font-size: 1.5rem;
     font-weight: 600;
+    text-align: center;
+}
+
+.card-text {
+    color: var(--main-blue);
+    font-size: 1rem;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -228,12 +240,16 @@
 }
 
 footer {
-    background-color: var(--light-blue);
+    background-color: var(--main-blue);
     color: var(--white);
 }
 
 footer a {
-    color: var(--main-blue);
+    color: var(--white);
+}
+
+.white-text {
+    color: var(--white);
 }
 
 .list-group-flush .list-group-item {
@@ -258,42 +274,116 @@ footer a {
     content: '';
 }
 
-.carousel-item {
-    max-height: calc(100vh - 88px);
-    min-height: calc(100vh - 88px);
+#banner {
+    height: 100vh;
+    background-image: url('./../images/cover.png');
+    background-repeat:no-repeat;
+    background-position: center center;
 }
 
-.carousel-item .img-fluid {
-    width: 100%;
-    height: 100%;
-}
-/*
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-image: none;
-}
-
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: red;
+#tools {
+    color: var(--white);
+    background-image: url("data:image/svg+xml,%3Csvg width='1920' height='300' viewBox='0 0 1920 300' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 234.898L983.893 298.705L0.291626 234.898V0.931885H1969.53V234.898Z' fill='%230E3E63'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position: center center;
+    min-height: 300px;  
+    background-color: #CCE0EA;
 }
 
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: red;
-}*/
+#tools h1 {
+    color: var(--white);
+}
 
-.carousel-inner>.item{
-    /*disables white flash*/
-    -webkit-transition: -webkit-transform .1s ease-in-out;
-    -o-transition: -o-transform .1s ease-in-out;
-    transition: transform .1s ease-in-out;
- }
+#tools h1 strong {
+    color: var(--white);
+}
 
- .carousel-inner{
-    /*just incase the flash (style above) comes back*/
-    background: #000;
+.tools-icons {
+    max-width: 226px; 
+    max-height: 180px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0;
+    margin-top: 50px;
+}
+
+#tools-details {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='1920' height='700' viewBox='0 0 1920 700' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 628.694L955.019 700L1914 628.694V0H0V628.694Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
+    background-repeat:no-repeat;
+    background-position: top center;
+    height: 750px;
+    max-height: 750px;
+    background-color: #F2F2F2;
+}
+
+#problems-to-resolve {
+    background-color: #F2F2F2;
+    padding-bottom: 100px;
+}
+
+#problems-to-resolve h3 {
+    padding-top: 5px;
+    color: #196AA2;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#problems-to-resolve h2 {
+    color: #196AA2;
+    text-align: center;
+    font-weight: normal;    
+    margin-bottom: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#problems-to-resolve h2 span{
+    font-weight: bold;
+}
+
+#problems-to-resolve p {
+    color: #196AA2;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.problems-to-resolve-icons {
+    max-width: 194px; 
+    max-height: 194px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0;
+    margin-top: 50px;
+}
+
+#benefits {
+    background-image: url("data:image/svg+xml,%3Csvg width='1941' height='1828' viewBox='0 0 1941 1828' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 1827.55H0.291626V106.903L961.121 0.122803L1969.53 106.903V1827.55Z' fill='%23196AA2'/%3E%3C/svg%3E");
+    color: var(--white);
+    background-repeat:no-repeat;
+    background-position: top center;
+    min-height: 1830px;  
+    background-color: #F2F2F2;
+}
+
+.left-arrow {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='1512' height='287' viewBox='0 0 1512 287' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1378.31 286.615H0.311401V0.874512H1378.31L1511.66 144.193L1378.31 286.615Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
+    background-color: transparent;    
+    background-repeat:no-repeat;
+    background-position: center left;
+}
+
+.right-arrow {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='1542' height='287' viewBox='0 0 1542 287' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M138.984 0.822266H1571.55V286.573H138.984L0.351501 143.254L138.984 0.822266Z' fill='%23CCE0EA'/%3E%3C/svg%3E");
+    background-color: transparent;    
+    background-repeat:no-repeat;
+    background-position: center right;
 }
