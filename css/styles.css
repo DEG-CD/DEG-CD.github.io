@@ -315,17 +315,29 @@ footer a {
     display: block; 
     margin-left: auto; 
     margin-right: auto;
-    padding: 0;
-    margin-top: 50px;
+    margin-top: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.tools-title {
+    color: #0E3E63;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    margin-bottom: 20px;
 }
 
 #tools-details {
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='1920' height='700' viewBox='0 0 1920 700' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 628.694L955.019 700L1914 628.694V0H0V628.694Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='600' viewBox='0 0 1920 700' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 628.694L955.019 700L1914 628.694V0H0V628.694Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
     background-repeat:no-repeat;
-    background-position: top center;
-    height: 750px;
-    max-height: 750px;
+    background-position: center center;
     background-color: #F2F2F2;
+    background-size: cover;
+    padding-bottom:150px;
 }
 
 #problems-to-resolve {
@@ -491,7 +503,10 @@ footer a {
     #plans h2 strong {
         font-size: 36px;
     }
-
+    
+    .tools-title {
+        font-size: 36px;
+    }
 }
 
 /* Pantallas medianas (md) */
@@ -853,6 +868,62 @@ footer a {
     background-repeat:no-repeat;
     background-position: top center;
     background-color: #196AA2;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#plans::after {
+    content: '';
+    position: absolute;
+    bottom: -50%; /* Ajusta esta posición según el tamaño */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0E3E63; /* Color del medio círculo */
+    border-radius: 50%; /* Crear un círculo completo */
+    z-index: 1;
+    width: 120%; /* Ancho del medio círculo predeterminado */
+    height: 100%; /* Altura del medio círculo predeterminado */
+}
+
+@media (max-width: 575.98px) {
+    /* xs: 0px a 575.98px */
+    #plans::after {
+        width: 150%;
+        height: 120%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* sm: 576px a 767.98px */
+    #plans::after {
+        width: 140%;
+        height: 110%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* md: 768px a 991.98px */
+    #plans::after {
+        width: 130%;
+        height: 105%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* lg: 992px a 1199.98px */
+    #plans::after {
+        width: 120%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    /* xl: 1200px a 1399.98px */
+    #plans::after {
+        width: 110%;
+        height: 95%;
+    }
 }
 
 #plans h1 {
@@ -869,10 +940,9 @@ footer a {
     background-color: var(--bs-body-bg);
     color: var(--white);
     background-repeat:no-repeat;
-    background-position: top center;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='499' height='307' viewBox='0 0 499 307'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B opacity: .2; %7D .cls-1, .cls-2 %7B fill: %23186ba3; %7D .cls-3 %7B fill: %23fff; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709) --%3E%3Cg%3E%3Cg id='Capa_1'%3E%3Cpath class='cls-1' d='M-.48-.42v112.18c252.59.34,422.57,123.5,499.9,194.82V-.42H-.48Z'/%3E%3Cpath class='cls-2' d='M499.42-.42v112.18C246.83,112.1,76.84,235.26-.48,306.58V-.42h499.9Z'/%3E%3Cg%3E%3Cpath class='cls-3' d='M117.84,90.39v-34.7h9.81v34.7h-9.81Z'/%3E%3Cpath class='cls-3' d='M149.07,90.39v-34.7h8.08l19.13,23.1h-3.82v-23.1h9.62v34.7h-8.08l-19.13-23.1h3.82v23.1h-9.62Z'/%3E%3Cpath class='cls-3' d='M203.44,90.39v-34.7h9.81v34.7h-9.81Z'/%3E%3Cpath class='cls-3' d='M251.97,91.09c-2.74,0-5.28-.44-7.61-1.31-2.33-.88-4.35-2.12-6.05-3.74-1.7-1.62-3.03-3.53-3.99-5.72-.96-2.2-1.44-4.62-1.44-7.26s.48-5.06,1.44-7.26c.96-2.2,2.29-4.11,3.99-5.72,1.7-1.62,3.72-2.87,6.05-3.74,2.33-.88,4.87-1.31,7.61-1.31,3.2,0,6.07.56,8.6,1.69,2.53,1.12,4.63,2.74,6.32,4.86l-6.25,5.65c-1.12-1.32-2.35-2.33-3.69-3.02-1.34-.69-2.83-1.04-4.49-1.04-1.42,0-2.73.23-3.92.69-1.19.46-2.21,1.13-3.05,2.01-.84.88-1.5,1.92-1.98,3.15s-.72,2.58-.72,4.06.24,2.84.72,4.06c.48,1.22,1.14,2.27,1.98,3.15.84.88,1.86,1.54,3.05,2.01s2.49.69,3.92.69c1.65,0,3.15-.35,4.49-1.04,1.34-.69,2.57-1.7,3.69-3.02l6.25,5.65c-1.69,2.08-3.79,3.69-6.32,4.83-2.53,1.14-5.4,1.71-8.6,1.71Z'/%3E%3Cpath class='cls-3' d='M285.67,90.39v-34.7h9.81v34.7h-9.81Z'/%3E%3Cpath class='cls-3' d='M312.74,90.39l15.32-34.7h9.67l15.37,34.7h-10.21l-12-29.89h3.87l-12,29.89h-10.01ZM321.11,83.65l2.53-7.24h16.95l2.53,7.24h-22.01Z'/%3E%3Cpath class='cls-3' d='M370.28,90.39v-34.7h9.81v26.92h16.56v7.78h-26.37Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-size: contain;
-    height: 230px;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 499 307'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B opacity: .2; %7D .cls-1, .cls-2 %7B fill: %23186ba3; %7D .cls-3 %7B fill: %23fff; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709) --%3E%3Cg%3E%3Cg id='Capa_1'%3E%3Cpath class='cls-1' d='M-.48-.42v112.18c252.59.34,422.57,123.5,499.9,194.82V-.42H-.48Z'/%3E%3Cpath class='cls-2' d='M499.42-.42v112.18C246.83,112.1,76.84,235.26-.48,306.58V-.42h499.9Z'/%3E%3Cg%3E%3Cpath class='cls-3' d='M117.84,90.39v-34.7h9.81v34.7h-9.81Z'/%3E%3Cpath class='cls-3' d='M149.07,90.39v-34.7h8.08l19.13,23.1h-3.82v-23.1h9.62v34.7h-8.08l-19.13-23.1h3.82v23.1h-9.62Z'/%3E%3Cpath class='cls-3' d='M203.44,90.39v-34.7h9.81v34.7h-9.81Z'/%3E%3Cpath class='cls-3' d='M251.97,91.09c-2.74,0-5.28-.44-7.61-1.31-2.33-.88-4.35-2.12-6.05-3.74-1.7-1.62-3.03-3.53-3.99-5.72-.96-2.2-1.44-4.62-1.44-7.26s.48-5.06,1.44-7.26c.96-2.2,2.29-4.11,3.99-5.72,1.7-1.62,3.72-2.87,6.05-3.74,2.33-.88,4.87-1.31,7.61-1.31,3.2,0,6.07.56,8.6,1.69,2.53,1.12,4.63,2.74,6.32,4.86l-6.25,5.65c-1.12-1.32-2.35-2.33-3.69-3.02-1.34-.69-2.83-1.04-4.49-1.04-1.42,0-2.73.23-3.92.69-1.19.46-2.21,1.13-3.05,2.01-.84.88-1.5,1.92-1.98,3.15s-.72,2.58-.72,4.06.24,2.84.72,4.06c.48,1.22,1.14,2.27,1.98,3.15.84.88,1.86,1.54,3.05,2.01s2.49.69,3.92.69c1.65,0,3.15-.35,4.49-1.04,1.34-.69,2.57-1.7,3.69-3.02l6.25,5.65c-1.69,2.08-3.79,3.69-6.32,4.83-2.53,1.14-5.4,1.71-8.6,1.71Z'/%3E%3Cpath class='cls-3' d='M285.67,90.39v-34.7h9.81v34.7h-9.81Z'/%3E%3Cpath class='cls-3' d='M312.74,90.39l15.32-34.7h9.67l15.37,34.7h-10.21l-12-29.89h3.87l-12,29.89h-10.01ZM321.11,83.65l2.53-7.24h16.95l2.53,7.24h-22.01Z'/%3E%3Cpath class='cls-3' d='M370.28,90.39v-34.7h9.81v26.92h16.56v7.78h-26.37Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
 }
 
 .initial-price {
@@ -892,10 +962,9 @@ footer a {
     background-color: var(--bs-body-bg);
     color: var(--white);
     background-repeat:no-repeat;
-    background-position: top center;
+    background-position: center center;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 499 307'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; %7D .cls-2 %7B opacity: .2; %7D .cls-2, .cls-3 %7B fill: %23cbac52; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709) --%3E%3Cg%3E%3Cg id='Capa_1'%3E%3Cpath class='cls-2' d='M-.48-.42v112.18c252.59.34,422.57,123.5,499.9,194.82V-.42H-.48Z'/%3E%3Cpath class='cls-3' d='M499.42-.42v112.18C246.83,112.1,76.84,235.26-.48,306.58V-.42h499.9Z'/%3E%3Cg%3E%3Cpath class='cls-1' d='M48.87,90.39l15.32-34.7h9.67l15.37,34.7h-10.21l-12-29.89h3.87l-12,29.89h-10.01ZM57.24,83.65l2.53-7.24h16.95l2.53,7.24h-22.01Z'/%3E%3Cpath class='cls-1' d='M117.07,90.39l-14.82-34.7h10.61l12.49,30.04h-6.25l12.79-30.04h9.71l-14.87,34.7h-9.67Z'/%3E%3Cpath class='cls-1' d='M154.64,90.39l15.32-34.7h9.67l15.37,34.7h-10.21l-12-29.89h3.87l-12,29.89h-10.01ZM163.02,83.65l2.53-7.24h16.95l2.53,7.24h-22.01Z'/%3E%3Cpath class='cls-1' d='M212.19,90.39v-34.7h8.08l19.13,23.1h-3.82v-23.1h9.62v34.7h-8.08l-19.13-23.1h3.82v23.1h-9.62Z'/%3E%3Cpath class='cls-1' d='M264.83,90.39v-6.15l20.42-24.24,1.19,3.47h-21.17v-7.78h29.89v6.15l-20.42,24.24-1.19-3.47h22.35v7.78h-31.08Z'/%3E%3Cpath class='cls-1' d='M310.48,90.39l15.32-34.7h9.67l15.37,34.7h-10.21l-12-29.89h3.87l-12,29.89h-10.01ZM318.86,83.65l2.53-7.24h16.95l2.53,7.24h-22.01Z'/%3E%3Cpath class='cls-1' d='M368.03,90.39v-34.7h16.41c3.83,0,7.2.71,10.11,2.13,2.91,1.42,5.18,3.42,6.82,6s2.45,5.65,2.45,9.22-.82,6.6-2.45,9.19c-1.64,2.59-3.91,4.6-6.82,6.02-2.91,1.42-6.28,2.13-10.11,2.13h-16.41ZM377.84,82.56h6.2c1.98,0,3.71-.37,5.18-1.12,1.47-.74,2.62-1.83,3.44-3.27.83-1.44,1.24-3.15,1.24-5.13s-.41-3.73-1.24-5.16c-.83-1.42-1.98-2.5-3.44-3.25-1.47-.74-3.2-1.12-5.18-1.12h-6.2v19.03Z'/%3E%3Cpath class='cls-1' d='M440.89,91.09c-2.78,0-5.34-.45-7.68-1.34-2.35-.89-4.39-2.16-6.12-3.79s-3.08-3.54-4.04-5.72c-.96-2.18-1.44-4.58-1.44-7.19s.48-5.01,1.44-7.19,2.31-4.09,4.04-5.72,3.77-2.9,6.12-3.79c2.35-.89,4.91-1.34,7.68-1.34s5.38.45,7.71,1.34c2.33.89,4.35,2.16,6.07,3.79,1.72,1.64,3.06,3.54,4.04,5.72.97,2.18,1.46,4.58,1.46,7.19s-.49,5.01-1.46,7.21c-.98,2.2-2.32,4.11-4.04,5.73-1.72,1.62-3.74,2.88-6.07,3.77-2.33.89-4.9,1.34-7.71,1.34ZM440.89,82.96c1.32,0,2.55-.23,3.69-.69,1.14-.46,2.13-1.13,2.97-2.01.84-.88,1.5-1.92,1.98-3.15.48-1.22.72-2.58.72-4.06s-.24-2.88-.72-4.09c-.48-1.21-1.14-2.25-1.98-3.12-.84-.88-1.83-1.54-2.97-2.01-1.14-.46-2.37-.69-3.69-.69s-2.55.23-3.69.69c-1.14.46-2.13,1.13-2.97,2.01-.84.88-1.5,1.92-1.98,3.12-.48,1.21-.72,2.57-.72,4.09s.24,2.84.72,4.06c.48,1.22,1.14,2.27,1.98,3.15.84.88,1.83,1.54,2.97,2.01s2.37.69,3.69.69Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-size: contain;
-    height: 230px;
+    background-size: cover;
 }
 
 .advanced-price {
@@ -914,10 +983,9 @@ footer a {
     background-color: var(--bs-body-bg);
     color: var(--white);
     background-repeat:no-repeat;
-    background-position: top center;
+    background-position: center center;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 499 307'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; %7D .cls-2 %7B opacity: .2; %7D .cls-2, .cls-3 %7B fill: %230b3e62; %7D %3C/style%3E%3C/defs%3E%3C!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709) --%3E%3Cg%3E%3Cg id='Capa_1'%3E%3Cpath class='cls-2' d='M-.48-.42v112.18c252.59.34,422.57,123.5,499.9,194.82V-.42H-.48Z'/%3E%3Cpath class='cls-3' d='M499.42-.42v112.18C246.83,112.1,76.84,235.26-.48,306.58V-.42h499.9Z'/%3E%3Cg%3E%3Cpath class='cls-1' d='M87.48,90.39v-34.7h15.86c3.17,0,5.91.51,8.2,1.54,2.3,1.03,4.07,2.5,5.33,4.44,1.26,1.93,1.88,4.22,1.88,6.87s-.63,4.88-1.88,6.79c-1.26,1.92-3.03,3.4-5.33,4.44-2.3,1.04-5.03,1.56-8.2,1.56h-10.41l4.36-4.26v13.33h-9.81ZM97.29,78.1l-4.36-4.51h9.81c2.05,0,3.58-.45,4.58-1.34,1.01-.89,1.51-2.13,1.51-3.72s-.5-2.88-1.51-3.77c-1.01-.89-2.54-1.34-4.58-1.34h-9.81l4.36-4.51v19.18Z'/%3E%3Cpath class='cls-1' d='M138.43,90.39v-34.7h15.86c3.17,0,5.91.51,8.2,1.54,2.3,1.03,4.07,2.5,5.33,4.44,1.26,1.93,1.88,4.22,1.88,6.87s-.63,4.87-1.88,6.77c-1.26,1.9-3.03,3.35-5.33,4.36-2.3,1.01-5.03,1.51-8.2,1.51h-10.41l4.36-4.11v13.33h-9.81ZM148.25,78.1l-4.36-4.51h9.81c2.05,0,3.58-.45,4.58-1.34,1.01-.89,1.51-2.13,1.51-3.72s-.5-2.88-1.51-3.77c-1.01-.89-2.54-1.34-4.58-1.34h-9.81l4.36-4.51v19.18ZM159.9,90.39l-8.62-12.64h10.46l8.67,12.64h-10.51Z'/%3E%3Cpath class='cls-1' d='M199.25,82.81h18.14v7.58h-27.86v-34.7h27.21v7.58h-17.5v19.53ZM198.56,69.13h16.11v7.34h-16.11v-7.34Z'/%3E%3Cpath class='cls-1' d='M237.27,90.39v-34.7h8.08l14.37,23.59h-4.26l13.98-23.59h8.08l.1,34.7h-9.02l-.1-20.97h1.54l-10.46,17.55h-4.36l-10.76-17.55h1.88v20.97h-9.07Z'/%3E%3Cpath class='cls-1' d='M298.98,90.39v-34.7h9.81v34.7h-9.81Z'/%3E%3Cpath class='cls-1' d='M346.22,91.09c-5.12,0-9.12-1.4-12-4.21-2.88-2.81-4.31-6.79-4.31-11.95v-19.23h9.81v18.93c0,2.97.59,5.11,1.76,6.39,1.17,1.29,2.78,1.93,4.83,1.93s3.65-.64,4.81-1.93c1.16-1.29,1.73-3.42,1.73-6.39v-18.93h9.67v19.23c0,5.15-1.44,9.14-4.31,11.95-2.88,2.81-6.87,4.21-12,4.21Z'/%3E%3Cpath class='cls-1' d='M383.59,90.39v-34.7h8.08l14.37,23.59h-4.26l13.98-23.59h8.08l.1,34.7h-9.02l-.1-20.97h1.54l-10.46,17.55h-4.36l-10.76-17.55h1.88v20.97h-9.07Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-size: contain;
-    height: 230px;
+    background-size: cover;
 }
 
 .premium-price {
@@ -930,4 +998,136 @@ footer a {
     font-style: normal;
     margin: 0;
     padding-top: 20px;
+}
+
+.initial-buy-button {
+    background-color: #196AA2;
+    color: var(--white);
+    border: none;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 30px !important;
+}
+
+.advanced-buy-button {
+    background-color: #CBAC53;
+    color: var(--white);
+    border: none;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 30px !important;
+}
+
+.premium-buy-button {
+    background-color: #0E3E63;
+    color: var(--white);
+    border: none;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 30px !important;
+}
+
+.plans-footer {
+    background-color: var(--bs-body-bg) !important;
+    border: none;
+}
+
+.features-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #0E3E63;
+}
+
+.features-list li {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 576px) {
+    .initial-plan-header, .advanced-plan-header, .premium-plan-header {
+        height: 335px;
+    }
+    .initial-price, .advanced-price, .premium-price {
+        font-size: 70px;
+    }
+    .features-list {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    #plans h2 {
+        font-size: 65px;
+    }
+
+    #plans h2 strong {
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .initial-plan-header, .advanced-plan-header, .premium-plan-header {
+        height: 450px;
+    }
+    .initial-price, .advanced-price, .premium-price {
+        font-size: 90px;
+    }
+    .features-list {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    #plans h2 {
+        font-size: 65px;
+    }
+
+    #plans h2 strong {
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .initial-plan-header, .advanced-plan-header, .premium-plan-header{
+        height: 160px;
+    }
+    .initial-price, .advanced-price, .premium-price {
+        font-size: 30px;
+    }
+    .features-list {
+        font-size: 16px;
+    }
+    #plans h2 {
+        font-size: 85px;
+    }
+
+    #plans h2 strong {
+        font-size: 90px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .initial-plan-header, .advanced-plan-header, .premium-plan-header {
+        height: 200px;
+    }
+    .initial-price, .advanced-price, .premium-price {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .initial-plan-header, .advanced-plan-header, .premium-plan-header{
+        height: 230px;
+    }
 }
