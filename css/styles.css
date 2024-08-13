@@ -199,10 +199,6 @@
     max-width: 1200px;
 }
 
-#plans .card {
-    border: 1px solid var(--gold);
-}
-
 .list-group-item {
     border: none;
 }
@@ -337,7 +333,7 @@ footer a {
     background-position: center center;
     background-color: #F2F2F2;
     background-size: cover;
-    padding-bottom:150px;
+    min-height: 750px;
 }
 
 #problems-to-resolve {
