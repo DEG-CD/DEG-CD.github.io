@@ -27,14 +27,6 @@
     align-items: center;
 }
 
-.logo img{
-    width: 75px; 
-    height: 100%; 
-    padding-top: 5px; 
-    padding-bottom: 5px; 
-    filter: drop-shadow(0px 0px 0px black);
-}
-
 * {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -223,8 +215,9 @@
 }
 
 .card-header {
-    background-color: var(--lighter-blue);
+    background-color: var(--bs-body-bg);
     color: var(--main-blue);
+    border: none;
 }
 
 .card-header h5.card-title {
@@ -415,10 +408,28 @@ footer a {
 }
 
 .left-arrow {
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='1512' height='287' viewBox='0 0 1512 287' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1378.31 286.615H0.311401V0.874512H1378.31L1511.66 144.193L1378.31 286.615Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='301' viewBox='0 0 512 301' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M466.544 300.875H0.311401V0.874512H466.544L511.661 151.346L466.544 300.875Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
     background-color: transparent;    
     background-repeat:no-repeat;
     background-position: center left;
+}
+
+.arrow-bg {
+    background-color: #CCE0EA;
+}
+
+.arrow-head {
+    background-color: #CCE0EA;
+    clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
+    max-width: 100px;
+    border: 1px solid #CCE0EA;
+}
+
+.arrow-head-reverse {
+    background-color: #CCE0EA;
+    clip-path: polygon(100% 0, 50% 0, 0 50%, 50% 100%, 100% 100%);
+    max-width: 100px;
+    border: 1px solid #CCE0EA;
 }
 
 .right-arrow {
@@ -426,6 +437,10 @@ footer a {
     background-color: transparent;    
     background-repeat:no-repeat;
     background-position: center right;
+}
+
+.no-border-radius {
+    border-radius: 0;
 }
 
 .container-arrow-left {
@@ -457,222 +472,6 @@ footer a {
     font-size: 67px;
 }
 
-/* Media Queries para diferentes breakpoints */
-
-/* Pantallas pequeñas (xs y sm) */
-@media (max-width: 575.98px) {
-    .container-arrow-left {
-        background-position: calc(100%) center;
-        background-size: cover;
-        width: 100%;
-        height: 300px;
-    }
-    #tools h2 strong {
-        font-size: 36px;
-    }
-    #tools h2 {
-        font-size: 36px;    
-    }
-
-    #problems-to-resolve h2 span{
-        font-weight: bold;
-        font-size: 36px;
-    }
-
-    #problems-to-resolve h2 {
-        font-weight: bold;
-        font-size: 36px;
-    }
-
-    #benefits h2 strong {
-        font-size: 36px;
-    }
-
-    #benefits h2 {
-        font-size: 36px;
-    }
-
-    #plans h2 {
-        font-size: 36px;
-    }
-
-    #plans h2 strong {
-        font-size: 36px;
-    }
-    
-    .tools-title {
-        font-size: 36px;
-    }
-}
-
-/* Pantallas medianas (md) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .container-arrow-left {
-        background-position: calc(100%) center;
-        background-size: cover;
-        width: 100%;
-        height: 250px;
-    }
-    #tools h2 strong {
-        font-size: 48px;
-    }
-    #tools h2 {
-        font-size: 48px;
-    }
-
-    #problems-to-resolve h2 span{
-        font-weight: bold;
-        font-size: 48px;
-    }
-
-    #problems-to-resolve h2 {
-        font-weight: bold;
-        font-size: 48px;
-    }
-
-    #benefits h2 strong {
-        font-size: 48px;
-    }
-
-    #benefits h2 {
-        font-size: 48px;
-    }
-
-    #plans h2 {
-        font-size: 48px;
-    }
-
-    #plans h2 strong {
-        font-size: 48px;
-    }
-}
-
-/* Pantallas grandes (lg) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .container-arrow-left {
-        background-position: calc(100%) center;
-        background-size: cover;
-        width: 100%;
-        height: 280px;
-    }
-}
-
-/* Pantallas extra grandes (xl) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .container-arrow-left {
-        background-position: calc(100%) center;
-        background-size: cover;
-        width: 100%;
-        height: 300px;
-    }
-}
-
-/* Pantallas XXL */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-    .container-arrow-left {
-        background-position: calc(100%) center;
-        background-size: cover;
-        height: 300px;
-    }
-}
-
-/* Pantallas superiores a 1400px */
-@media (min-width: 1400px) {
-    .container-arrow-left {
-        background-position: calc(100%) center;
-        background-size: cover;
-    }
-}
-
-/* Imagen dentro del contenedor */
-.image-arrow-left {
-    width: 20%;
-    object-fit: contain;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Segundo div dentro del contenedor */
-.content-arrow-left {
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    align-content: center;
-    padding: 20px;
-}
-
-/* Media Queries para breakpoints */
-
-/* Para pantallas pequeñas (xs y sm) */
-@media (max-width: 575.98px) {
-    .image-arrow-left {
-        width: 20%; /* Imagen ocupa más espacio en pantallas muy pequeñas */
-    }
-    .content-arrow-left {
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
-        max-height: 100%;
-        padding: 0 !important;
-        padding-right: 30px !important;
-    }
-}
-
-/* Para pantallas medianas (md) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .image-arrow-left {
-        width: 30%;
-    }
-    .content-arrow-left {
-        width: 60%;
-        height: 100%;
-        min-height: 100%;
-        max-height: 100%;
-    }
-}
-
-/* Para pantallas grandes (lg) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .image-arrow-left {
-        width: 25%;
-    }
-    .content-arrow-left {
-        width: 70%;
-    }
-}
-
-/* Para pantallas extra grandes (xl) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .image-arrow-left {
-        width: 20%;
-    }
-    .content-arrow-left {
-        width: 75%;
-    }
-}
-
-/* Para pantallas XXL */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-    .image-arrow-left {
-        width: 20%;
-    }
-    .content-arrow-left {
-        width: 75%;
-    }
-}
-
-/* Para pantallas superiores a 1400px */
-@media (min-width: 1400px) {
-    .image-arrow-left {
-        width: 20%;
-    }
-    .content-arrow-left {
-        width: 75%;
-    }
-}
-
 /* Estilos generales */
 #benefits h3 {
     font-family: "Montserrat", sans-serif;
@@ -693,82 +492,6 @@ footer a {
     line-height: 30px;
 }
 
-/* Media Queries para hacer el texto responsive */
-
-/* Pantallas pequeñas (xs y sm) */
-@media (max-width: 575.98px) {
-    #benefits h3 {
-        font-size: 18px; /* Reduce el tamaño del título */
-    }
-
-    #benefits p {
-        font-size: 14px; /* Reduce el tamaño del párrafo */
-        line-height: 14px;
-    }
-}
-
-/* Pantallas medianas (md) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    #benefits h3 {
-        font-size: 28px; /* Reduce el tamaño del título */
-    }
-
-    #benefits p {
-        font-size: 18px; /* Reduce el tamaño del párrafo */
-        line-height: 24px;
-    }
-}
-
-/* Pantallas grandes (lg) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    #benefits h3 {
-        font-size: 38px;
-    }
-
-    #benefits p {
-        font-size: 18px;
-        line-height: 28px;
-    }
-}
-
-/* Pantallas extra grandes (xl) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    #benefits h3 {
-        font-size: 48px;
-    }
-
-    #benefits p {
-        font-size: 20px;
-        line-height: 30px;
-    }
-}
-
-/* Pantallas XXL */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-    #benefits h3 {
-        font-size: 48px;
-    }
-
-    #benefits p {
-        font-size: 20px;
-        line-height: 30px;
-    }
-}
-
-/* Pantallas superiores a 1400px */
-@media (min-width: 1400px) {
-    #benefits h3 {
-        font-size: 48px;
-    }
-
-    #benefits p {
-        font-size: 20px;
-        line-height: 30px;
-    }
-}
-
-/*********************************/
-
 .container-arrow-right {
     width: 75%;
     display: flex;
@@ -778,65 +501,6 @@ footer a {
     background-color: transparent;    
     background-repeat: no-repeat;
     height: 300px;
-}
-
-/* Media Queries para diferentes breakpoints */
-
-/* Pantallas pequeñas (xs y sm) */
-@media (max-width: 575.98px) {
-    .container-arrow-right {
-        background-position: left center;
-        background-size: cover;
-        width: 100%;
-        height: 300px;
-    }
-}
-
-/* Pantallas medianas (md) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .container-arrow-right {
-        background-position: calc(0%) center;
-        background-size: cover;
-        width: 100%;
-        height: 250px;
-    }
-}
-
-/* Pantallas grandes (lg) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .container-arrow-right {
-        background-position: calc(0%) center;
-        background-size: cover;
-        width: 100%;
-        height: 280px;
-    }
-}
-
-/* Pantallas extra grandes (xl) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .container-arrow-right {
-        background-position: calc(0%) center;
-        background-size: cover;
-        width: 100%;
-        height: 300px;
-    }
-}
-
-/* Pantallas XXL */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-    .container-arrow-right {
-        background-position: calc(0%) center;
-        background-size: cover;
-        height: 300px;
-    }
-}
-
-/* Pantallas superiores a 1400px */
-@media (min-width: 1400px) {
-    .container-arrow-right {
-        background-position: calc(0%) center;
-        background-size: cover;
-    }
 }
 
 /* Imagen dentro del contenedor */
@@ -880,46 +544,6 @@ footer a {
     z-index: 1;
     width: 120%; /* Ancho del medio círculo predeterminado */
     height: 100%; /* Altura del medio círculo predeterminado */
-}
-
-@media (max-width: 575.98px) {
-    /* xs: 0px a 575.98px */
-    #plans::after {
-        width: 150%;
-        height: 120%;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-    /* sm: 576px a 767.98px */
-    #plans::after {
-        width: 140%;
-        height: 110%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    /* md: 768px a 991.98px */
-    #plans::after {
-        width: 130%;
-        height: 105%;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    /* lg: 992px a 1199.98px */
-    #plans::after {
-        width: 120%;
-        height: 100%;
-    }
-}
-
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-    /* xl: 1200px a 1399.98px */
-    #plans::after {
-        width: 110%;
-        height: 95%;
-    }
 }
 
 #plans h1 {
@@ -1052,78 +676,4 @@ footer a {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-}
-
-@media (max-width: 576px) {
-    .initial-plan-header, .advanced-plan-header, .premium-plan-header {
-        height: 335px;
-    }
-    .initial-price, .advanced-price, .premium-price {
-        font-size: 70px;
-    }
-    .features-list {
-        font-size: 30px;
-        line-height: 40px;
-    }
-    #plans h2 {
-        font-size: 65px;
-    }
-
-    #plans h2 strong {
-        font-size: 70px;
-    }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-    .initial-plan-header, .advanced-plan-header, .premium-plan-header {
-        height: 450px;
-    }
-    .initial-price, .advanced-price, .premium-price {
-        font-size: 90px;
-    }
-    .features-list {
-        font-size: 35px;
-        line-height: 40px;
-    }
-    #plans h2 {
-        font-size: 65px;
-    }
-
-    #plans h2 strong {
-        font-size: 70px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 992px) {
-    .initial-plan-header, .advanced-plan-header, .premium-plan-header{
-        height: 160px;
-    }
-    .initial-price, .advanced-price, .premium-price {
-        font-size: 30px;
-    }
-    .features-list {
-        font-size: 16px;
-    }
-    #plans h2 {
-        font-size: 85px;
-    }
-
-    #plans h2 strong {
-        font-size: 90px;
-    }
-}
-
-@media (min-width: 993px) and (max-width: 1200px) {
-    .initial-plan-header, .advanced-plan-header, .premium-plan-header {
-        height: 200px;
-    }
-    .initial-price, .advanced-price, .premium-price {
-        font-size: 40px;
-    }
-}
-
-@media (min-width: 1201px) {
-    .initial-plan-header, .advanced-plan-header, .premium-plan-header{
-        height: 230px;
-    }
 }
