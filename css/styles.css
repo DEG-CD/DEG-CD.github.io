@@ -32,28 +32,59 @@
 
 #tools {
     color: var(--white);
-    background-image: url("data:image/svg+xml,%3Csvg width='1920' height='300' viewBox='0 0 1920 300' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 234.898L983.893 298.705L0.291626 234.898V0.931885H1969.53V234.898Z' fill='%230E3E63'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='100%' height='100%'  preserveAspectRatio='none' viewBox='0 0 1938 299' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 234.898L983.893 298.705L0.291626 234.898V0.931885H1969.53V234.898Z' fill='%230E3E63'/%3E%3C/svg%3E");
     background-repeat:no-repeat;
     background-position: center center;
-    min-height: 300px;  
+    background-size: cover;
+    min-height: 300px;
     background-color: #CCE0EA;
 }
 
 #tools-details {
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='600' viewBox='0 0 1920 700' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 628.694L955.019 700L1914 628.694V0H0V628.694Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='100%'  preserveAspectRatio='none' viewBox='0 0 1933 1312' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-28.9406 1178.25L949.572 1311.84L1932.14 1178.25V0.414795H-28.9406V1178.25Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
     background-repeat:no-repeat;
     background-position: center center;
-    background-color: #F2F2F2;
     background-size: cover;
     min-height: 750px;
+    background-color: #F2F2F2;
+}
+
+#problems {
+    background-color: #F2F2F2;
 }
 
 #benefits {
-    background-image: url("data:image/svg+xml,%3Csvg width='1941' height='1828' viewBox='0 0 1941 1828' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 1827.55H0.291626V106.903L961.121 0.122803L1969.53 106.903V1827.55Z' fill='%23196AA2'/%3E%3C/svg%3E");
-    color: var(--white);
+    background-image: url("data:image/svg+xml,%3Csvg  width='100%' height='100%'  preserveAspectRatio='none' viewBox='0 0 1941 1827' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 1827.55H0.291626V106.903L961.121 0.122803L1969.53 106.903V1827.55Z' fill='%23196AA2'/%3E%3C/svg%3E");
     background-repeat:no-repeat;
-    background-position: top center;
+    background-position: center center;
+    background-size: cover;
     background-color: #F2F2F2;
+    margin-bottom: 0;
+}
+
+#plans {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='100%'  preserveAspectRatio='none' viewBox='0 0 1940 1714' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-32 108.712L945.993 0.0859375L1939.28 108.712V1713.3H-32V108.712Z' fill='%23DDF0FC'/%3E%3C/svg%3E%0A");
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #196AA2;
+    padding-top: 100px; 
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+#plans::after {
+    content: '';
+    position: absolute;
+    bottom: -60%; /* Ajusta esta posición según el tamaño */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%; /* Ancho del círculo */
+    height: 100%; /* Altura del círculo */
+    background-color: #0E3E63; /* Color del círculo */
+    border-radius: 50%; /* Crear un círculo completo */
+    z-index: 1; /* Envía el pseudo-elemento detrás del div */
 }
 
 .arrow-head {
@@ -68,4 +99,85 @@
     clip-path: polygon(100% 0, 50% 0, 0 50%, 50% 100%, 100% 100%);
     max-width: 100px;
     border: 1px solid #CCE0EA;
+}
+
+.no-border-radius {
+    border-radius: 0 !important;
+}
+
+footer {
+    background-color: #0E3E63;
+    color: #FFF;
+}
+
+footer a, p {
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer .social-media-list-item {
+    background-color: #0E3E63;
+}
+
+footer .social-media-list {
+    padding: 0;
+}
+
+/********************************** MEDIA QUERY */
+@media (max-width: 575.98px) {
+    /* xs: 0px a 575.98px */
+    #plans::after {
+        width: 0%; /* Ancho ajustado */
+        bottom: -50%; /* Ajuste del bottom */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* sm: 576px a 767.98px */
+    #plans::after {
+        width: 150%; /* Ancho ajustado */
+        bottom: -85%; /* Ajuste del bottom */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* md: 768px a 991.98px */
+    #plans::after {
+        width: 120%; /* Ancho ajustado */
+        bottom: -60%; /* Ajuste del bottom */
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* lg: 992px a 1199.98px */
+    #plans::after {
+        width: 130%; /* Ancho ajustado */
+        bottom: -65%; /* Ajuste del bottom */
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    /* xl: 1200px a 1399.98px */
+    #plans::after {
+        width: 140%; /* Ancho ajustado */
+        bottom: -70%; /* Ajuste del bottom */
+    }
+}
+
+@media (min-width: 1400px) {
+    /* xxl: 1400px en adelante */
+    #plans::after {
+        width: 150%; /* Ancho ajustado */
+        bottom: -75%; /* Ajuste del bottom */
+    }
+}
+
+.no-gutters {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
 }
