@@ -46,7 +46,7 @@
 #tools-details {
     background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='100%' preserveAspectRatio='none' viewBox='0 0 1933 1085' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-28.9406 868L949.572 1084.84L1932.14 868V0.414795H949.572H-28.9406V868Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
     background-repeat:no-repeat;
-    background-position: center -10px;
+    background-position: center -5rem;
     background-size: cover;
     background-color: #F2F2F2;
     padding-top: 100px;
@@ -147,7 +147,7 @@
 
 
 #plans {
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='100%'  preserveAspectRatio='none' viewBox='0 0 1940 1714' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-32 108.712L945.993 0.0859375L1939.28 108.712V1713.3H-32V108.712Z' fill='%23DDF0FC'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='100%' preserveAspectRatio='none' viewBox='0 0 1951 1714' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-32 108.712L945.993 0.0859375L1981.5 105V1713.3H-32V108.712Z' fill='%23DDF0FC'/%3E%3C/svg%3E%0A");
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
@@ -323,4 +323,9 @@ footer .social-media-list {
     height: 80px;
     font-size: 1.8rem;
     border-radius: 50px;
+}
+
+#menu ul li a {
+    color: var(--premium);
+    font-weight: 500;
 }
