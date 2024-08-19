@@ -14,6 +14,9 @@
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    --initial: #196AA2;
+    --advance: #CBAC53;
+    --premium: #0E3E63;
 }
 
 * {
@@ -32,43 +35,123 @@
 
 #tools {
     color: var(--white);
-    background-image: url("data:image/svg+xml,%3Csvg width='100%' height='100%'  preserveAspectRatio='none' viewBox='0 0 1938 299' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 234.898L983.893 298.705L0.291626 234.898V0.931885H1969.53V234.898Z' fill='%230E3E63'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='100%' height='100%' preserveAspectRatio='none' viewBox='0 0 1938 299' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 234.898L983.893 298.705L0.291626 234.898V0.931885H1969.53V234.898Z' fill='%230E3E63'/%3E%3C/svg%3E");
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
-    min-height: 300px;
+    min-height: 350px;
     background-color: #CCE0EA;
 }
 
 #tools-details {
-    background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='100%'  preserveAspectRatio='none' viewBox='0 0 1933 1312' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-28.9406 1178.25L949.572 1311.84L1932.14 1178.25V0.414795H-28.9406V1178.25Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='100%' preserveAspectRatio='none' viewBox='0 0 1933 1085' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-28.9406 868L949.572 1084.84L1932.14 868V0.414795H949.572H-28.9406V868Z' fill='%23CCE0EA'/%3E%3C/svg%3E%0A");
     background-repeat:no-repeat;
-    background-position: center center;
+    background-position: center -10px;
     background-size: cover;
-    min-height: 750px;
     background-color: #F2F2F2;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 850px;
+}
+
+#tools-details h2 {
+    color: var(--premium);
+    font-weight: bold;
+}
+
+#tools-details p {
+    color: var(--premium);
+    font-weight: normal;
+}
+
+#tools-details .card {
+    border: none;
+    border-radius: 0;
+}
+
+.tools-icons {
+    background-color: #FFF;
+    border: none;
+    padding-top: 75px;
+    padding-bottom: 25px;
 }
 
 #problems {
     background-color: #F2F2F2;
 }
 
+#problems h2 {
+    color: var(--initial);
+    font-weight: normal;
+}
+
+#problems h2 span {
+    color: var(--initial);
+    font-weight: bold;
+}
+
+#problems h3 {
+    color: var(--initial);
+    font-weight: bold;
+}
+
+#problems p {
+    color: var(--initial);
+    font-weight: normal;
+}
+
+#problems .card {
+    border: none;
+    border-radius: 0;
+    background-color: #F2F2F2;
+}
+
+#problems .card-body {
+    background-color: #F2F2F2;
+}
+
+#problems .card-header {
+    background-color: #F2F2F2;
+    border: none;
+}
+
 #benefits {
-    background-image: url("data:image/svg+xml,%3Csvg  width='100%' height='100%'  preserveAspectRatio='none' viewBox='0 0 1941 1827' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 1827.55H0.291626V106.903L961.121 0.122803L1969.53 106.903V1827.55Z' fill='%23196AA2'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg  width='100%' height='100%' preserveAspectRatio='none' viewBox='0 0 1941 1827' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1969.53 1827.55H0.291626V106.903L961.121 0.122803L1969.53 106.903V1827.55Z' fill='%23196AA2'/%3E%3C/svg%3E");
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
     background-color: #F2F2F2;
-    margin-bottom: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
+
+#benefits h2 {
+    color: var(--white);
+}
+
+#benefits h3 {
+    color: var(--premium);
+    font-weight: bold;
+}
+
+#benefits .card {
+    min-height: 285px;
+    border: none;
+}
+
+.card-text-premium {
+    border: none;
+    color: var(--premium);
+    font-weight: normal;
+}
+
 
 #plans {
     background-image: url("data:image/svg+xml,%0A%3Csvg width='100%' height='100%'  preserveAspectRatio='none' viewBox='0 0 1940 1714' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-32 108.712L945.993 0.0859375L1939.28 108.712V1713.3H-32V108.712Z' fill='%23DDF0FC'/%3E%3C/svg%3E%0A");
     background-repeat:no-repeat;
     background-position: center center;
     background-size: cover;
-    background-color: #196AA2;
-    padding-top: 100px; 
+    background-color: var(--initial);
     position: relative;
     overflow: hidden;
     margin-top: 0;
@@ -82,23 +165,23 @@
     transform: translateX(-50%);
     width: 120%; /* Ancho del círculo */
     height: 100%; /* Altura del círculo */
-    background-color: #0E3E63; /* Color del círculo */
+    background-color: var(--premium);
     border-radius: 50%; /* Crear un círculo completo */
     z-index: 1; /* Envía el pseudo-elemento detrás del div */
 }
 
 .arrow-head {
-    background-color: #CCE0EA;
+    background-color: #FFF;
     clip-path: polygon(0% 0%, 50% 0, 100% 50%, 50% 100%, 0% 100%);
     max-width: 100px;
-    border: 1px solid #CCE0EA;
+    border: 0;
 }
 
 .arrow-head-reverse {
-    background-color: #CCE0EA;
+    background-color: #FFF;
     clip-path: polygon(100% 0, 50% 0, 0 50%, 50% 100%, 100% 100%);
     max-width: 100px;
-    border: 1px solid #CCE0EA;
+    border: 0;
 }
 
 .no-border-radius {
@@ -106,7 +189,7 @@
 }
 
 footer {
-    background-color: #0E3E63;
+    background-color: var(--premium);
     color: #FFF;
 }
 
@@ -119,7 +202,7 @@ footer a, p {
 }
 
 footer .social-media-list-item {
-    background-color: #0E3E63;
+    background-color: var(--premium);
 }
 
 footer .social-media-list {
@@ -180,4 +263,64 @@ footer .social-media-list {
     padding-left: 0 !important;
     margin-right: 0 !important;
     padding-right: 0 !important;
+}
+
+#plans .card-header {
+    background-color: #FFF;
+    border: none;
+}
+
+#plans .card {
+    border: none;
+}
+
+#plans .card-body {
+    background-color: #FFF;
+}
+
+#plans .card-footer {
+    background-color: #FFF;
+    border: none;
+}
+
+#plans h2 {
+    color: var(--premium);
+    font-weight: normal;
+}
+
+#plans h2 span {
+    color: var(--premium);
+    font-weight: bold;    
+}
+
+
+.initial-buy-button {
+    background-color: var(--initial);
+    color: #FFF;
+    border: none;
+    width: 100%;
+    height: 80px;
+    font-size: 1.8rem;
+    border-radius: 50px;
+}
+
+.advanced-buy-button {
+    background-color: var(--advance);
+    color: #FFF;
+    border: none;
+    width: 100%;
+    height: 80px;
+    font-size: 1.8rem;
+    border-radius: 50px;
+}
+
+
+.premium-buy-button {
+    background-color: var(--premium);
+    color: #FFF;
+    border: none;
+    width: 100%;
+    height: 80px;
+    font-size: 1.8rem;
+    border-radius: 50px;
 }
