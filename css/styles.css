@@ -332,6 +332,104 @@ footer .social-media-list {
     font-weight: 500;
 }
 
+
+.initial-price {
+    color: var(--initial);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.advance-price {
+    color: var(--advance);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.premium-price {
+    color: var(--premium);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.features-list {
+    color: var(--premium);
+    font-weight: normal;
+    list-style: none;
+}
+
+.features-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.features-list li img {
+    margin-right: 10px;
+}
+
+#privacy .card .card-header{
+    background-color: #FFF;
+}
+
+#privacy p {
+    color: var(--premium);
+}
+
+#privacy a {
+    color: var(--premium);
+}
+
+#privacy a:hover {
+    color: var(--gold);
+}
+
+#privacy h4 {
+    color: var(--premium);
+}
+
+#privacy h1 span {
+    color: var(--gold);
+    font-weight: bold;
+}
+
+#privacy h1 {
+    color: var(--premium);
+    font-weight: normal;
+}
+
+#privacy ol {
+    color: var(--premium);
+    font-weight: normal;
+}
+
+#privacy ol li {
+    color: var(--premium);
+    font-weight: normal;
+}
+
+#privacy ul {
+    color: var(--premium);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+#faqs .card .card-header{
+    background-color: #FFF;
+}
+
+#faqs p {
+    color: var(--premium);
+}
+
+#faqs h1 span {
+    color: var(--gold);
+    font-weight: bold;
+}
+
+#faqs h1 {
+    color: var(--premium);
+    font-weight: normal;
+}
+
 /********************************** MEDIA QUERY */
 @media (max-width: 575.98px) {
     /* xs: 0px a 575.98px */
@@ -474,37 +572,3 @@ footer .social-media-list {
         height: 820px;
     }
 }
-
-.initial-price {
-    color: var(--initial);
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-.advance-price {
-    color: var(--advance);
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-.premium-price {
-    color: var(--premium);
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-.features-list {
-    color: var(--premium);
-    font-weight: normal;
-    list-style: none;
-}
-
-.features-list li {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.features-list li img {
-    margin-right: 10px;
-}
-
