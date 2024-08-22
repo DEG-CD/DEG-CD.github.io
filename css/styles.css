@@ -430,6 +430,36 @@ footer .social-media-list {
     font-weight: normal;
 }
 
+#faqs .accordion-button:not(.collapsed) {
+    background-color: var(--main-blue); /* Change to your preferred color */
+    color: #FFF; /* Optional: change the text color */
+    font-weight: bold;
+}
+
+#faqs .accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1); /* Optional: change the arrow icon color */
+}
+
+#faqs .accordion-item .accordion-collapse {
+    background-color: #f0f8ff; /* Match with the expanded button color */
+    border-top: 1px solid #ddd; /* Optional: add a border between items */
+}
+
+#faqs .accordion-button {
+    color: var(--premium);
+}
+
+#faqs .accordion-button span {
+    color: var(--premium);
+    font-weight: bold;
+}
+
+#faqs .accordion-button:not(.collapsed) span{
+    background-color: var(--main-blue);
+    color: #FFF;
+    font-weight: bold;
+}
+
 /********************************** MEDIA QUERY */
 @media (max-width: 575.98px) {
     /* xs: 0px a 575.98px */
