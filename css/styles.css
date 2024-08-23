@@ -31,7 +31,7 @@ body { padding-top: 60px; }
 html { scroll-behavior: smooth;}
 
 #banner {
-    background-image: url('./../images/cover.png');
+    background-image: url('./../images/cover.webp');
     background-repeat:no-repeat;
     background-position: center;
     background-size: auto;
